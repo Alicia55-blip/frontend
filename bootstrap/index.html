@@ -10,10 +10,7 @@
                 border:1px solid rgb(153, 51, 51);
                 height: 300px;
             }
-            .row{
-                text-align: center;
-            }
-
+            
 
         </style>
     </head>
@@ -30,13 +27,13 @@
               <div class="image">
                 <div class="row">
                   <div class="col-sm-4">
-                    <img src="téléchargement.jpeg"alt="" id="premiere">
+                    <img src="téléchargement.jpeg"alt="" id="premiere" class="d-none">
                   </div>
                   <div class="col-sm-4">
-                    <img src="téléchargement (1).jpeg" alt="" id="deuxieme">
+                    <img src="téléchargement (1).jpeg" alt="" id="deuxieme" class="d-none">
                   </div>
                   <div class="col-sm-4">
-                    <img src="téléchargement (2).jpeg" alt="" id="troisieme">
+                    <img src="téléchargement (2).jpeg" alt="" id="troisieme" class="d-none">
                   </div>
                 </div>
               </div><br><br>
@@ -63,22 +60,22 @@
                 troisieme = document.getElementById("troisieme");
 
                 if (compteur == 0) {
-                    premiere.style.display = 'block'
+                    premiere.classList.add("d-block");
                     compteur ++;
                 }
                 else if (compteur == 1) {
-                    premiere.style.display = 'none'
-                    deuxieme.style.display = 'block'
+                    premiere.classList.remove("d-block");
+                    deuxieme.classList.add("d-block");
                     compteur ++;
                 }
                 else if (compteur == 2) {
-                    deuxieme.style.display = 'none'
-                    troisieme.style.display = 'block'
+                    deuxieme.classList.remove("d-block");
+                    troisieme.classList.add("d-block");
                     compteur ++;
                 }
                 else if (compteur == 3) {
-                    deuxieme.style.display = 'none'
-                    troisieme.style.display = 'none'
+                    deuxieme.classList.remove("d-block");
+                    troisieme.classList.remove("d-block");
                     compteur = 0;
                 }            
             }
